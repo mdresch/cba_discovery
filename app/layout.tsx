@@ -2,7 +2,7 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import Header from "./components/header"
 import Footer from "./components/footer"
-
+import AnimatedBackground from "./components/animated-background"
 import PageTransition from "./components/page-transition"
 import LoadingBar from "./components/loading-bar"
 import { ThemeProvider } from "./components/theme-provider"
@@ -26,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LoadingBar />
+          <AnimatedBackground />
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
