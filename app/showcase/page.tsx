@@ -13,7 +13,7 @@ const allProducts = [
     name: "TechAI",
     category: "AI",
     description: "AI-powered business analytics",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-techai.jpg?height=400&width=400",
     details: "TechAI uses advanced machine learning algorithms to provide real-time insights into your business data.",
   },
   {
@@ -21,7 +21,7 @@ const allProducts = [
     name: "CloudScale",
     category: "Infrastructure",
     description: "Scalable cloud infrastructure",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-cloudscale.jpg?height=400&width=400",
     details: "CloudScale offers a flexible, high-performance cloud platform that grows with your business needs.",
   },
   {
@@ -29,7 +29,7 @@ const allProducts = [
     name: "SecureGuard",
     category: "Security",
     description: "Advanced cybersecurity solution",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-secureguard.jpeg?height=400&width=400",
     details:
       "SecureGuard provides state-of-the-art protection against the latest cyber threats, ensuring your data remains safe.",
   },
@@ -38,7 +38,7 @@ const allProducts = [
     name: "DataSync",
     category: "Data",
     description: "Real-time data synchronization",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-datasync.jpg?height=400&width=400",
     details: "DataSync ensures your data is always up-to-date across all your systems and devices.",
   },
   {
@@ -46,7 +46,7 @@ const allProducts = [
     name: "AIAssist",
     category: "AI",
     description: "AI-powered virtual assistant",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-aiassist.jpg?height=400&width=400",
     details: "AIAssist provides intelligent virtual assistance to streamline your daily tasks and boost productivity.",
   },
   {
@@ -54,7 +54,7 @@ const allProducts = [
     name: "CloudBackup",
     category: "Infrastructure",
     description: "Automated cloud backup solution",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-cloudbackup.jpg?height=400&width=400",
     details:
       "CloudBackup ensures your critical data is always safe and easily recoverable with automated cloud backups.",
   },
@@ -63,7 +63,7 @@ const allProducts = [
     name: "CyberShield",
     category: "Security",
     description: "Comprehensive cybersecurity suite",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-cybershield-2.jpeg?height=400&width=400",
     details:
       "CyberShield offers a full suite of cybersecurity tools to protect your business from evolving digital threats.",
   },
@@ -72,13 +72,13 @@ const allProducts = [
     name: "DataViz",
     category: "Data",
     description: "Advanced data visualization tool",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/showcase-dataviz.jpg?height=400&width=400",
     details:
       "DataViz transforms complex data into clear, actionable insights through powerful visualization techniques.",
   },
 ]
 
-const ITEMS_PER_PAGE = 4
+const ITEMS_PER_PAGE = 1
 
 export default function Showcase() {
   const [filter, setFilter] = useState("All")
@@ -118,7 +118,7 @@ export default function Showcase() {
       const productsToLoad = filteredProducts.slice(0, ITEMS_PER_PAGE)
 
       for (let i = 0; i < productsToLoad.length; i++) {
-        await new Promise((resolve) => setTimeout(resolve, 300)) // Simulate API delay
+        await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate API delay
         setDisplayedProducts((prev) => [...prev, productsToLoad[i]])
       }
 
@@ -139,7 +139,7 @@ export default function Showcase() {
     const newProducts = filteredProducts.slice(startIndex, endIndex)
 
     for (let i = 0; i < newProducts.length; i++) {
-      await new Promise((resolve) => setTimeout(resolve, 300)) // Simulate API delay
+      await new Promise((resolve) => setTimeout(resolve, 600)) // Simulate API delay
       setDisplayedProducts((prev) => [...prev, newProducts[i]])
     }
 
@@ -218,8 +218,8 @@ export default function Showcase() {
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
-                width={300}
-                height={200}
+                width={400}
+                height={400}
                 className="mb-4 rounded"
               />
               <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
@@ -248,6 +248,12 @@ export default function Showcase() {
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
         <DialogContent>
           <DialogHeader>
+            <Image
+              src={selectedProduct?.image || "/placeholder.svg"}
+              alt={selectedProduct?.name}
+              width={600}
+              height={600}
+              className="rounded"></Image>
             <DialogTitle>{selectedProduct?.name}</DialogTitle>
             <DialogDescription>{selectedProduct?.details}</DialogDescription>
           </DialogHeader>

@@ -1,23 +1,29 @@
 import Link from "next/link"
 
-const blogPosts = [
+export const blogPosts = [
   {
+    id: "1",
     slug: "future-of-ai-in-business",
     title: "The Future of AI in Business",
     date: "2023-06-01",
     excerpt: "Exploring how AI is transforming various industries...",
+    content: "Full content of the AI article...",
   },
   {
+    id: "2",
     slug: "scaling-infrastructure",
     title: "Scaling Your Infrastructure: Best Practices",
     date: "2023-05-15",
     excerpt: "Learn how to effectively scale your IT infrastructure...",
+    content: "Full content of the scaling article...",
   },
   {
+    id: "3",
     slug: "cybersecurity-trends-2023",
     title: "Cybersecurity Trends in 2023",
     date: "2023-04-30",
     excerpt: "Stay ahead of the curve with these emerging cybersecurity trends...",
+    content: "Full content of the cybersecurity article...",
   },
 ]
 
