@@ -96,6 +96,26 @@ export default function Header() {
               </li>
             </ul>
           </li>
+          <li className="relative group">
+            <span className="text-muted-foreground hover:text-foreground cursor-pointer">Account</span>
+            <ul className="absolute right-0 mt-2 space-y-2 bg-background shadow-md rounded-md p-2 hidden group-hover:block">
+              <li>
+                <Link href="/login" className="text-muted-foreground hover:text-foreground block">
+                  Sign Up
+                </Link>
+              </li>
+              <li>
+                <Link href="/login" className="text-muted-foreground hover:text-foreground block">
+                  Sign In
+                </Link>
+              </li>
+              <li>
+                <Link href="/account" className="text-muted-foreground hover:text-foreground block">
+                  Account
+                </Link>
+              </li>
+            </ul>
+          </li>
           <li>
             <ThemeToggle />
           </li>

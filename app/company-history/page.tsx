@@ -7,6 +7,7 @@ export default function CompanyHistoryPage() {
     { year: 2019, event: "Reached 1 million active users across all products" },
     { year: 2021, event: "Launched open-source initiative to give back to the tech community" },
     { year: 2023, event: "Celebrating our continued growth and innovation" },
+    { year: 2025, event: "Looking forward to the next decade of TechCorp" },
   ]
 
   return (
